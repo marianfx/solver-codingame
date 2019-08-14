@@ -11,3 +11,4 @@ Below you can see a table with all the details.
 |     ASCII Art     |         Strings, Arrays, Loops          |        [here](https://www.codingame.com/training/easy/ascii-art)        |    Easy    | 100%  | 2017  |
 |   Chuck Norris    |  Strings, Encoding, Loops, Conditions   |      [here](https://www.codingame.com/training/easy/chuck-norris)       |    Easy    | 100%  | 2017  |
 |     MIME Type     | Conditions, Loops, Hash Tables, Strings |        [here](https://www.codingame.com/training/easy/mime-type)        |    Easy    | 100%  | 2017  |
+|    Onboarding     |               Conditions                |       [here](https://www.codingame.com/training/easy/onboarding)        |    Easy    | 100%  | 2017  |
