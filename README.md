@@ -14,3 +14,4 @@ Below you can see a table with all the details.
 |     Onboarding     |               Conditions                |       [here](https://www.codingame.com/training/easy/onboarding)        |    Easy    | 100%  | 2017  |
 |    Temperatures    |        Conditions, Loops, Arrays        |      [here](https://www.codingame.com/training/easy/temperatures)       |    Easy    | 100%  | 2017  |
 | Horse-Racing Duals |                  Loops                  |   [here](https://www.codingame.com/training/easy/horse-racing-duals)    |    Easy    | 100%  | 2017  |
+|   Defibrillators   |     Loops, Distances, Trigonometry      |     [here](https://www.codingame.com/training/easy/defibrillators)      |    Easy    | 100%  | 2017  |
