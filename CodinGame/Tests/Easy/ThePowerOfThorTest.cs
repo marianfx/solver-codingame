@@ -13,14 +13,32 @@ namespace Tests.Easy
     {
         #region Setup
         private Solution solution;
-        private StringWriter consoleMock;
+        private StringWriter consoleOutputMock;
+        private StringReader consoleInputMock;
+        string outputString = @"E
+E
+E
+";
+        string inputString = @"10 10 7 10
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1";
 
         [TestInitialize]
         public void SetUp()
         {
             solution = new Solution();
-            consoleMock = new StringWriter();
-            Console.SetOut(consoleMock);
+            consoleOutputMock = new StringWriter();
+            consoleInputMock = new StringReader(inputString);
+            Console.SetIn(consoleInputMock);
+            Console.SetOut(consoleOutputMock);
         }
 
         [TestCleanup]
@@ -33,31 +51,9 @@ namespace Tests.Easy
         [TestMethod]
         public void Given_Solution_When_TestingWithSampleInput_Then_Should_GetGoodResult()
         {
-            var outputString =
-@"E
-E
-E
-";
-            var inputString =
-@"10 10 7 10
-10
-9
-8
-7
-6
-5
-4
-3
-2
-1";
-
-            // init
-            var inputStream = new StringReader(inputString);
-            Console.SetIn(inputStream);
-
             //given = in test initialize
             Solution.Main(new string[] {});
-            var output = consoleMock.ToString();
+            var output = consoleOutputMock.ToString();
             output.Should().Be(outputString);
         }
     }
