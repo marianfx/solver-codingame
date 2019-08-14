@@ -16,3 +16,4 @@ Below you can see a table with all the details.
 | Horse-Racing Duals |                  Loops                  |      [here](https://www.codingame.com/training/easy/horse-racing-duals)       |    Easy    | 100%  | 2017  |
 |   Defibrillators   |     Loops, Distances, Trigonometry      |        [here](https://www.codingame.com/training/easy/defibrillators)         |    Easy    | 100%  | 2017  |
 | There is no Spoon  |                  Lists                  | [here](https://www.codingame.com/training/medium/there-is-no-spoon-episode-1) |   Medium   | 100%  | 2017  |
+|        War         |                 Queues                  |       [here](https://www.codingame.com/training/medium/winamax-battle)        |   Medium   | 100%  | 2018  |
