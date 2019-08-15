@@ -28,8 +28,8 @@ namespace Solutions.Medium.AneoSponsoredPuzzle
         {
             int speed = int.Parse(Console.ReadLine());
             int lightCount = int.Parse(Console.ReadLine());
-            Console.Error.WriteLine(speed);
-            Console.Error.WriteLine(lightCount);
+            // Console.Error.WriteLine(speed);
+            // Console.Error.WriteLine(lightCount);
 
             var lights = new Light[lightCount];
             for (int i = 0; i < lightCount; i++)
@@ -38,35 +38,35 @@ namespace Solutions.Medium.AneoSponsoredPuzzle
                 int distance = int.Parse(inputs[0]);
                 int duration = int.Parse(inputs[1]);
                 lights[i] = new Light(distance, duration);
-                Console.Error.WriteLine(lights[i].ToString());
+                // Console.Error.WriteLine(lights[i].ToString());
             }
 
-            var maxSpeedMps = speed / (60.0 * 60.0) * 1000.0;
+            var maxSpeedMps = speed * (10.0 / 36.0); // KM/h => m/s (S / 3600 * 1000)
 
-            // loop through lights and compute max speed, iterative
             int step = 0;
             while (step < lightCount)
             {
-                // each light has a valid interval, which is the on
-                // (x - 1) * A <= y <= x * A 
-                // => x >= y/A && x <= y/A + 1
-                // => x = ceil(y/A);
-                // start = green => if x is odd, i can go
-
-                // how many seconds until the current light
-                var wasReset = false;
+                var wasReset = false; // flag to recheck previous lights when speed changes
                 while (true)
                 {
-                    var arriveIn = lights[step].Distance / maxSpeedMps;
+                    var arriveIn = Math.Round(lights[step].Distance / maxSpeedMps, 10);
+
+                    // each light has a valid interval, which is the on
+                    // (x - 1) * A <= y < x * A 
+                    // => x > y/A && x <= y/A + 1
+                    // => x ~= ceil(y/A);
                     var X = Math.Ceiling(arriveIn / lights[step].Duration * 1.0);
-                    var isGood = (X % 2 == 1 && arriveIn != lights[step].Duration * X) 
+
+                    // start = green => the odd interval is good, except the interval is not inclusive
+                    // form: [m*X, m*X + A) 
+                    var isGood = (X % 2 == 1 && arriveIn != lights[step].Duration * X)
                         || (X % 2 == 0 && arriveIn == lights[step].Duration * X);
                     if (isGood)
                         break;
 
                     wasReset = true;
-                    speed--; // decrease KM, not M
-                    maxSpeedMps = speed / (60.0 * 60.0) * 1000.0;
+                    speed--; // decrease KM / H
+                    maxSpeedMps -= (10.0 / 36.0); // decrease M/H
 
                     if (speed == 0)
                         break;

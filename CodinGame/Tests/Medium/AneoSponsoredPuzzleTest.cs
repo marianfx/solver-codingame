@@ -15,13 +15,16 @@ namespace Tests.Medium
         private Solution solution;
         private StringWriter consoleOutputMock;
         private StringReader consoleInputMock;
-        string outputString = @"67
+        string outputString = @"60
 ";
-        string inputString = @"90
-3
-300 30
-1500 20
-3000 10";
+        string inputString = @"200
+6
+1000 15
+3000 10
+4000 30
+5000 30
+6000 5
+7000 10";
 
         [TestInitialize]
         public void SetUp()
