@@ -19,3 +19,4 @@ Below you can see a table with all the details.
 |              War               |                 Queues                  |         [here](https://www.codingame.com/training/medium/winamax-battle)          |   Medium   | 100%  | 2018  |
 |     Aneo Sponsored Puzzle      |         Mathematics, Intervals          |              [here](https://www.codingame.com/training/medium/aneo)               |   Medium   | 100%  | 2019  |
 | Shadows of the Knight (Batman) |       2D Binary Search, Intervals       | [here](https://www.codingame.com/training/medium/shadows-of-the-knight-episode-1) |   Medium   | 100%  | 2019  |
+|       Skynet Revolution        |               Graphs, BFS               |   [here](https://www.codingame.com/training/medium/skynet-revolution-episode-1)   |   Medium   | 100%  | 2019  |
