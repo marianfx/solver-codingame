@@ -7,11 +7,11 @@ namespace Solutions.Medium.SkynetRevolution
     // the class used to keep (where i'm coming from) and (how much until here)
     public class PathNode
     {
-        public int From;
+        public PathNode From;
         public int Current;
         public int Distance;
 
-        public PathNode(int current, int from = -1, int distance = 0)
+        public PathNode(int current, PathNode from = null, int distance = 0)
         {
             Current = current;
             From = from;
@@ -47,7 +47,7 @@ namespace Solutions.Medium.SkynetRevolution
                         || discovered[i] == true) continue;
 
                     discovered[i] = true;
-                    q.Enqueue(new PathNode(i, v.Current, v.Distance + 1));
+                    q.Enqueue(new PathNode(i, v, v.Distance + 1));
                 }
             }
 
@@ -86,11 +86,17 @@ namespace Solutions.Medium.SkynetRevolution
             {
                 int SI = int.Parse(Console.ReadLine()); // The index of the node on which the Skynet agent is positioned this turn
                 var cut = Custom_BFS(G, SI, gatewayNodes);
-                G[cut.From, cut.Current] = G[cut.Current, cut.From] = false;
+
+                // cut is a path; get first element from path to cut directly
+                while(cut?.From?.From != null)
+                {
+                    cut = cut.From;
+                }
+                G[cut.From.Current, cut.Current] = G[cut.Current, cut.From.Current] = false;
 
                 if (cut == null) return;
 
-                Console.WriteLine($"{cut.From} {cut.Current}");
+                Console.WriteLine($"{cut.From.Current} {cut.Current}");
             }
         }
     }
