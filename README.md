@@ -20,3 +20,4 @@ Below you can see a table with all the details. Check my [profile](https://www.c
 |     Aneo Sponsored Puzzle      |         Mathematics, Intervals          |              [here](https://www.codingame.com/training/medium/aneo)               |   Medium   | 100%  | 2019  |
 | Shadows of the Knight (Batman) |       2D Binary Search, Intervals       | [here](https://www.codingame.com/training/medium/shadows-of-the-knight-episode-1) |   Medium   | 100%  | 2019  |
 |       Skynet Revolution        |               Graphs, BFS               |   [here](https://www.codingame.com/training/medium/skynet-revolution-episode-1)   |   Medium   | 100%  | 2019  |
+|          Don't Panic           |          2D Matrix, Conditions          |      [here](https://www.codingame.com/training/medium/don't-panic-episode-1)      |   Medium   | 100%  | 2019  |
