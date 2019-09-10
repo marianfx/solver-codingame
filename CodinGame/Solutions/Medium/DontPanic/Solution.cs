@@ -143,6 +143,7 @@ namespace Solutions.Medium.DontPanic
                 {
                     Console.WriteLine(ACTION_BLOCK);
                     matrix.SetCloneLocation(clonePos, cloneFloor);
+                    continue;
                 }
 
                 Console.WriteLine(ACTION_WAIT);             // action: WAIT or BLOCK
