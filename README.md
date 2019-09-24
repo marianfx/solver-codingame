@@ -1,6 +1,7 @@
 ## Short description
 This repository contains a list of solved problem from CodinGame, mostly written in C#.
 Below you can see a table with all the details. Check my [profile](https://www.codingame.com/profile/c62d373307cc13f1b05441aa15bc3279849898).
+If you want instead to my other solved LeetCode problems, check them [here](https://github.com/marianfx/solver-leetcode).
 
 ## Problem List
 |              Name              |                 Subject                 |                                        URL                                        | Difficulty | Score | Date  |
